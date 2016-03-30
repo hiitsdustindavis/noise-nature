@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'noise-nature-blog',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://nature-sounds.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
