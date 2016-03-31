@@ -1,27 +1,32 @@
-<h1>Update Post</h1>
+{{#if addNewPost}}
+<h1>New Post</h1>
 <form>
   <div class="form-group">
     <label for="title">Title</label>
-    <input id="title" type="text" placeholder=title>
+    {{input value=title id="title"}}
   </div>
   <div class="form-group">
     <label for="natureType">Nature Type</label>
-    <input id="natureType" type="text" placeholder=post.natureType>
+    {{input value=natureType id="natureType"}}
   </div>
   <div class="form-group">
     <label for="trevorSong">Trevor's Song</label>
-    <input id="trevorSong" type="text" placeholder=post.trevorSong>
+    {{input value=trevorSong id="trevorSong"}}
   </div>
   <div class="form-group">
     <label for="dustinSong">Dustin's Song</label>
-    <input id="dustinSong" type="text" placeholder=post.dustinSong>
+    {{input value=dustinSong id="dustinSong"}}
   </div>
   <div class="form-group">
     <label for="tileImage">Tile Image</label>
-    <input id="tileImage" type="text" placeholder=post.tileImage>
+    {{input value=tileImage id="tileImage"}}
   </div>
   <div class="form-group">
     <label for="images">Post Images</label>
-    <input id="images" type="text" placeholder=post.images>
+    {{input value=images id="images"}}
   </div>
+  <button {{action 'newPost1'}}>Save</button>
 </form>
+{{else}}
+<button {{action 'newPostFormShow'}}>New Post</button>
+{{/if}}

@@ -2,6 +2,8 @@
 
 <ul>
   {{#each model as |post|}}
-    {{post-tile post=post}}
-  {{/each}}  
+    {{post-tile post=post destroyPost="destroyPost"}}
+  {{/each}}
 </ul>
+
+{{post-new newPost2="newPost3"}}
