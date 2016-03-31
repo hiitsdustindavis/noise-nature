@@ -15,29 +15,29 @@
     <form>
       <div class="form-group">
         <label for="title">Title</label>
-        <input id="title" type="text" placeholder=title>
+        {{input value=title id="title" placeholder=post.title}}
       </div>
       <div class="form-group">
         <label for="natureType">Nature Type</label>
-        <input id="natureType" type="text" placeholder=post.natureType>
+        {{input value=natureType id="natureType" placeholder=post.natureType}}
       </div>
       <div class="form-group">
         <label for="trevorSong">Trevor's Song</label>
-        <input id="trevorSong" type="text" placeholder=post.trevorSong>
+        {{input value=trevorSong id="trevorSong" placeholder=post.trevorSong}}
       </div>
       <div class="form-group">
         <label for="dustinSong">Dustin's Song</label>
-        <input id="dustinSong" type="text" placeholder=post.dustinSong>
+        {{input value=dustinSong id="dustinSong" placeholder=post.dustinSong}}
       </div>
       <div class="form-group">
         <label for="tileImage">Tile Image</label>
-        <input id="tileImage" type="text" placeholder=post.tileImage>
+        {{input value=tileImage id="tileImage" placeholder=post.tileImage}}
       </div>
       <div class="form-group">
         <label for="images">Post Images</label>
-        <input id="images" type="text" placeholder=post.images>
+        {{input value=images id="images" placeholder=post.images}}
       </div>
-      <button {{action 'formHide'}} type="button" name="edit">Save</button>
+      <button {{action 'formHide', 'updatePost'}} type="button" name="edit">Save</button>
     </form>
   {{else}}
     <button {{action 'formShow'}} type="button" name="edit">Edit Post</button>
