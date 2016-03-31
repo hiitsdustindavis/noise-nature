@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         dustinSong: this.get('dustinSong'),
         tileImage: this.get('tileImage'),
         images: this.get('images')
-      }; debugger;
+      };
       this.set('editPost', false);
       this.sendAction('updatePost', post, params);
     }

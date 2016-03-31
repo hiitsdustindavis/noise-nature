@@ -1,9 +1,15 @@
 <h1>This is the Index</h1>
 
 <ul>
-  {{#each model as |post|}}
+  {{#each model.post as |post|}}
     {{post-tile post=post destroyPost="destroyPost" updatePost="updatePost"}}
   {{/each}}
 </ul>
 
 {{post-new newPost2="newPost3"}}
+
+<h2>Image URLs</h2>
+
+{{#each model.images as |image|}}
+  <li>{{image.url}}</li>
+{{/each}}

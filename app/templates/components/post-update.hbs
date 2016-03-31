@@ -22,7 +22,7 @@
     </div>
     <div class="form-group">
       <label for="images">Post Images</label>
-      {{input value=images id="images" placeholder=post.images}}
+      {{input value=images id="images" placeholder=post.images.url}}
     </div>
     <button {{action 'updatePost' post}} type="button" name="edit">Save</button>
   </form>

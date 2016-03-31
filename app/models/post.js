@@ -6,5 +6,5 @@ export default DS.Model.extend({
   trevorSong: DS.attr(),
   dustinSong: DS.attr(),
   tileImage: DS.attr(),
-  images: DS.attr()
+  images: DS.hasMany('image', {async:true})
 });
