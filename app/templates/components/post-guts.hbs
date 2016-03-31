@@ -3,46 +3,13 @@
     <h3>{{post.title}}</h3>
     <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2447365851/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://johnwiese.bandcamp.com/album/soft-punk">Soft Punk by John Wiese</a></iframe>
 
-
-
   {{#each post.images as |image|}}
   <img src={{image}} alt="{{post.title}}" />
   {{/each}}
 
-
-<br>
-  {{#if isFormShowing}}
-    <form>
-      <div class="form-group">
-        <label for="title">Title</label>
-        {{input value=title id="title" placeholder=post.title}}
-      </div>
-      <div class="form-group">
-        <label for="natureType">Nature Type</label>
-        {{input value=natureType id="natureType" placeholder=post.natureType}}
-      </div>
-      <div class="form-group">
-        <label for="trevorSong">Trevor's Song</label>
-        {{input value=trevorSong id="trevorSong" placeholder=post.trevorSong}}
-      </div>
-      <div class="form-group">
-        <label for="dustinSong">Dustin's Song</label>
-        {{input value=dustinSong id="dustinSong" placeholder=post.dustinSong}}
-      </div>
-      <div class="form-group">
-        <label for="tileImage">Tile Image</label>
-        {{input value=tileImage id="tileImage" placeholder=post.tileImage}}
-      </div>
-      <div class="form-group">
-        <label for="images">Post Images</label>
-        {{input value=images id="images" placeholder=post.images}}
-      </div>
-      <button {{action 'formHide', 'updatePost'}} type="button" name="edit">Save</button>
-    </form>
-  {{else}}
-    <button {{action 'formShow'}} type="button" name="edit">Edit Post</button>
-    {{/if}}
   <br>
   <button {{action 'deletePost' post}}>Delete Post</button>
+  {{post-update post=post updatePost="updatePost"}}
+
 </div>
 </li>
